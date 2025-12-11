@@ -6,6 +6,11 @@ CORS(app)
 
 # API: Company Info
 @app.route("/api/company-info", methods=["GET"])
+
+@app.route("/")
+def home():
+    return jsonify({"message": "Softwire Backend is Running Successfully!"})
+
 def company_info():
     data = {
         "name": "Softwire Technologies",
